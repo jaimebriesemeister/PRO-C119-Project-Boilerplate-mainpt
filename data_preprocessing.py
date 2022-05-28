@@ -36,7 +36,7 @@ def get_stem_words(words, ignore_words):
         Verifique se a palavra não faz parte da palavra de parada:
         1) converta-a para minúsculo
         2) stemize a palavra
-        3) anexe-a lista stem_words
+        3) anexe-a na lista stem_words
         4) retorne a lista
         ''' 
         # Adicione o código aqui #        
@@ -111,7 +111,7 @@ def bag_of_words_encoding(stem_words, pattern_word_tags_list):
         Escreva o algoritmo BOW:
         1) pegue uma palavra da lista stem_words
         2) verifique se essa palavra está em stemmed_pattern_word
-        3) anexae 1 no BOW; caso contrário, anexe 0
+        3) anexe 1 no BOW; caso contrário, anexe 0
         '''
         
         bag.append(bag_of_words)
@@ -144,7 +144,7 @@ def preprocess_train_data():
   
     stem_words, tag_classes, word_tags_list = create_bot_corpus(words, classes, pattern_word_tags_list, ignore_words)
     
-    # Converta as palavras-tronco e a lista classes para o formato de arquivo Python pickel
+    # Converta as palavras-tronco e a lista classes para o formato de arquivo Python pickle
     
 
     train_x = bag_of_words_encoding(stem_words, word_tags_list)
